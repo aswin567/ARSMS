@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "0e006fe0-e806-4cf9-a011-8e8a6377b020",
+		"name": "ARSMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "UnauthorisedList",
+			"item": [
+				{
+					"name": "UnauthorisedEntry",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"areaName\": \"Area 1\",\r\n      \"unAuthorisedAccessLists\": [{\r\n          \"userId\":\"1234\",\r\n          \"timeStamp\":\"12346566464\"\r\n      }]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/unAuthorisedAccess",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"unAuthorisedAccess"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update UnauthorisedEntry",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"areaName\": \"Area 1\",\r\n      \"unAuthorisedAccessList\": [{\r\n          \"userId\":\"1234\",\r\n          \"timeStamp\":\"12346566464\"\r\n      }]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/unAuthorisedAccess/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"unAuthorisedAccess",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Access",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/unAuthorisedAccess",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"unAuthorisedAccess"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Particual Unauthorised Access",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"name\": \"Aswin\",\r\n      \"roleNo\": \"12345\",\r\n      \"mobileNumber\": \"9567753387\",\r\n      \"email\": \"aswin.kv@siemens.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Access",
+			"item": [
+				{
+					"name": "Create Access",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "      {\r\n      \"name\": \"Access 1\",\r\n      \"allowedUsers\": [\"12345\", \"123456\", \"1234567\"]\r\n      }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/access/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"access",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Access",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update Access",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"allowedUsers\": [\r\n        \"1234\",\r\n        \"zzzz\",\r\n        \"abcd\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/access/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"access",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
